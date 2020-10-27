@@ -13,6 +13,18 @@ $(document).ready( function() {
 
 });
 
+// Bonus: uso delle frecce sinistra e destra della tastiera
+$(document).keydown( function(freccina) {
+
+  console.log(freccina.keyCode);
+  if(freccina.keyCode == 39){
+    nextPrev('next');
+  }
+  else if(freccina.keyCode == 37){
+    nextPrev('prev');
+  }
+});
+
   // Function per il Next/Prev slider
 function nextPrev(direction) {
     var activeImg = $('.images img.active');
